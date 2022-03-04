@@ -1,4 +1,4 @@
-# Workflow for coastal metagenomes
+# From Raw Sequences to MAGs
 
 This is the workflow we used for the coastal metagenomes using Anvi'o 7.1. For the purpose of this tutorial, we are working just with the metagenome of Laminaria Setchellii (MG4). The same workflow was used for the other metagenomes. Only once all analyses were complete did we swap Reference ID for the more human-friendly Final ID.
 
