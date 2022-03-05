@@ -1,7 +1,7 @@
 # Generating a nifH phylogenetic figure
-<center>
+<div style="text-align: center;">
 <img src='./nifHTree.png' width=350>
-</center>
+</div>
 This workflow goes through the steps taken to generate Fig. 2 that places the nifH genes found within the broader phylogenetic context of the nifH gene. The files used are in this folder. 
 
 Quick learnings:
