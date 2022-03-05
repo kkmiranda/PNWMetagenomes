@@ -1,6 +1,6 @@
 # From Raw Sequences to MAGs
 
-This is the workflow we used for the coastal metagenomes using Anvi'o 7.1. For the purpose of this tutorial, we are working just with the metagenome of Laminaria Setchellii (MG4). The same workflow was used for the other metagenomes. Only once all analyses were complete did we swap Reference ID for the more human-friendly Final ID.
+This is the workflow we used for the coastal metagenomes using Anvi'o 6.1 (has been <a href='https://anvio.org/'>updated</a> since). For the purpose of this tutorial, we are working just with the metagenome of Laminaria Setchellii (MG4). The same workflow was used for the other metagenomes. Only once all analyses were complete did we swap Reference ID for the more human-friendly Final ID.
 
 ### Metagenome Reference numbers:
 | Reference ID  | Species                   | Tissue    | Final ID  |
@@ -43,7 +43,7 @@ total pairs failed            : 12086056 (%19.92 of all pairs)
 ```
 
 ## 2. Assembly: From Quality Sequences to Contigs
-Metagenomes were assembled into contigs using a snakemake pipeline in anvio, with the following settings for IDBA-UD (Peng et al. 2012):
+Metagenomes were assembled into contigs using a snakemake pipeline in anvio (thanks to Emily Fogarty!), with the following settings for IDBA-UD (Peng et al. 2012):
 ```
  "idba_ud": {
         "--min_contig": 1000,
