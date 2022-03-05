@@ -7,7 +7,7 @@ This is the workflow we used for the coastal metagenomes using Anvi'o 6.1 (has b
 |---------------|---------------------------|-----------|-----------|
 | MG1           | Phyllospadix scouleri     | Sediment  |PSC_SED    |
 | MG2           | Phyllospadix scouleri     | Blade     |PSC_BLD    |
-| MG4           | Phyllospadix scouleri     | Rhizome   |PSC_RHZ    |
+| MG3           | Phyllospadix scouleri     | Rhizome   |PSC_RHZ    |
 | MG4           | Laminaria setchellii      | Frond     |LSE_BLD    |
 | MG5           | Nereocystis luetkeana     | Inner Bulb|NLE_BLB    |
 | MG6           | Phyllospadix serrulatus   | Rhizome   |PSE_RHZ    |
