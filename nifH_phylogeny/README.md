@@ -1,6 +1,6 @@
 # Generating a nifH phylogenetic figure
-<p textalign='center'>
-<img src='./nifHTree.png' width=20vw>
+<p text-align='center'>
+<img src='./nifHTree.png' width=200>
 </p>
 This workflow goes through the steps taken to generate Fig. 2 that places the nifH genes found within the broader phylogenetic context of the nifH gene. The files used are in this folder. 
 
