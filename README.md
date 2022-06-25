@@ -8,6 +8,9 @@ This folder contains files and workflows used in describing novel microbial comm
 - <a href='./nifH_phylogeny/README.md'>Identifying nifH genes and generating a phylogenetic tree</a>
 - <a href='./microbial_metabolisms/README.md'>Microbial Metabolism Heatmap</a>
 
+### Database Files available at:
+Figshare: 10.6084/m9.figshare.20152949
+
 ### Workflow credits
 Organisation of this workflow was inspired by M. Eren's countless <a href='https://anvio.org/'>anvi'o tutorials</a> and B. Weigel's <a href='https://github.com/brookeweigel/Kelp_associated_bacterial_genomes'>Kelp Metagenome Workflow</a>
 
