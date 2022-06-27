@@ -47,13 +47,15 @@ This approach treats all genes in a KEGG definition like a nodes in a graph.
 
 The genes at the start of the pathway are treated as the source nodes and those at the end are the target nodes. 
 
-If it is possible to cross the network from source to target, allowing for __% of steps to be missed, a metabolism is present.
+If it is possible to cross the network from source to target, allowing for __% of steps to be missed, a metabolism is present. It's also possible to mess with the percentage allowed missing to account for common metabolisms in novel environments. 
 
 I do this by using `get_all_simple_paths` from the `iGraph` package to find each possible path from <i>each</i> source node to <i>each</i> target node. This generates a large list of possible paths between source and target nodes.
 
 Then I query the `masterdata file` generated above for all possible genes in each possible pathway. 
 
-The nitty-gritties of the pathway can be found at <a href="https://github.com/kkmiranda/NAMeD">NAMeD</a>
+The nitty-gritties of the pathway can be found at <a href="https://github.com/kkmiranda/NAMeD">NAMeD</a>. 
+
+The output of this is found in `assets/misc_table_33.txt`
 
 ## Carbon Metabolisms
 
