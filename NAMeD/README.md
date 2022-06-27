@@ -39,7 +39,7 @@ Then, once updating the basepaths in `gen_masterdata.py`, run
 python gen_masterdata.py
 ```
 
-## Pathway Algorithm to identify Vitamin metabolisms
+## NAMeD
 The pathway algorithm was developed for the case of detecting entire metabolic pathways. It's useful when dealing with metabolic pathways that are long (>10 steps) with alternative pathways available that may repeat gene usage. Particularly useful with pathways like the Vitamin B12 pathway that has both aerobic and anaerobic pathways present. 
 
 ### The Approach
@@ -47,16 +47,13 @@ This approach treats all genes in a KEGG definition like a nodes in a graph.
 
 The genes at the start of the pathway are treated as the source nodes and those at the end are the target nodes. 
 
-I then use `get_all_simple_paths` from the `iGraph` package to find each possible path from <i>each</i> source node to <i>each</i> target node. This generates a large list of possible paths between source and target nodes.
+If it is possible to cross the network from source to target, allowing for __% of steps to be missed, a metabolism is present.
+
+I do this by using `get_all_simple_paths` from the `iGraph` package to find each possible path from <i>each</i> source node to <i>each</i> target node. This generates a large list of possible paths between source and target nodes.
 
 Then I query the `masterdata file` generated above for all possible genes in each possible pathway. 
 
-The nitty-gritties of the pathway can be found <a href='./pathwayAlgorithm/'></a>. Ideally, I'd have a parser that takes in a KEGG definition and then spits out a graph. But maybe I'll do that later. The function remains the same.
-
-Any of the pathway files can be run using (provided the dependencies are installed):
-```
-python pathwayBiotin.py
-```
+The nitty-gritties of the pathway can be found at <a href="https://github.com/kkmiranda/NAMeD">NAMeD</a>
 
 ## Carbon Metabolisms
 
