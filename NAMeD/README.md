@@ -6,7 +6,7 @@ For our study, we were interested in the metabolic capacity of microbial communi
 
 ## Generating a masterdata file
 
-<i>You can either follow the section below or if you want to just go straight to working with the algorithm, download </i>`tatoosh_masterdata.txt`<i> and </i>`tatoosh_MAG_names.txt`<i> from our figShare repo: 10.6084/m9.figshare.20152949. Save this in this folder and go on to the next section.
+<i>You can either follow the section below or if you want to just go straight to working with the algorithm, download </i>`tatoosh_masterdata.txt`<i> and </i>`tatoosh_MAG_names.txt`<i> from our figShare repo: 10.6084/m9.figshare.20152949. Save this in this folder and go on to the next section.</i>
 
 From the <a href='../01_Raw_Sequences_to_MAGs.md'> Raw Sequences to MAGs Workflow</a>, we are left with `CONTIGS.db` and `PROFILE.db` files for <b>8 metagenomes</b> that have been clustered and cleaned into MAGs with high completion and low redundancy. 
 
