@@ -5,9 +5,9 @@
 This folder contains files and workflows used in describing novel microbial communities living on the surfaces and in the rhizomes of marine coastal phototrophs in the Pacific NorthEast Ocean. Sampling was conducted on Tatoosh Island (Makah Tribe, WA, USA) and at West Falmouth Harbor (MA, USA). 
 
 - Start with <a href='./01_Raw_Sequences_to_MAGs.md'>From Raw Sequences to MAGs</a>
-- <a href='./fig1_DissolvedO2/README.md'>Fig 1: Dissolved Oxygen Graph</a>
-- <a href='./fig2_taxonomy/README.md'>Fig2: Taxonomy</a>
-- <a href='./microbial_metabolisms/README.md'>Fig 3: Microbial Metabolism Heatmap using NAMeD</a>
+- <a href='./fig1_DissolvedO2/README.md'>Fig. 1: Dissolved Oxygen Graph</a>
+- <a href='./fig2_taxonomy/README.Rmd'>Fig. 2: Taxonomy</a>
+- <a href='./NAMeD/README.md'>Fig. 3: Microbial Metabolism Heatmap using NAMeD</a>
 - <a href='./fig4nifH_phylogeny/README.md'>Fig. 4: Identifying nifH genes and generating a phylogenetic tree</a>
 
 
