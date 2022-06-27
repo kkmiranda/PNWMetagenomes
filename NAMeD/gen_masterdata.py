@@ -8,11 +8,11 @@ I take in the gene function file, add in:
 3. tax_id
 """
 
-## Would have to update the basepaths to your configuration
 gene_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/gene_splits"
 bin_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/bins_n_splits"
 func_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/gene_function"
 taxon_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/tax_ID"
+SPLlen_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/split_length"
 output_basepath = "/Users/khashiffm/Documents/Research/Cathylab/metagenomes/nifH/masterdata_17May2021"
 
 def gen_masterdata(Sample):

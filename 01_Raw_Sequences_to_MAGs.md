@@ -15,7 +15,7 @@ This is the workflow we used for the coastal metagenomes using Anvi'o 6.1 (has b
 | MG8           | Zostera marina            | Sediment  |ZMA_SED    |
 
 ## 1. Quality Filtering
-Begin with a tab-delimited file `lamsetch.txt` that points to `R1` and `R2` fasta files.
+Begin with a tab-delimited file `lamsetch.txt` that points to `R1` and `R2` fasta files (can be found under NCBI's Sequence Read Archive under PRJNA813168).
 
 |sample     |r1                     |r2                 |
 |-----------|-----------------------|-------------------|
@@ -278,6 +278,10 @@ Additional binning trivia:
 - The CONCOCT algorithm attempted to find at max 100 clusters but the output shows clusters completely empty. This is normal and these bins were immediately discarded.
 - We classified MAGs as High Quality (<b>Completion > 90% and Redundancy < 10%</b>) or Low Quality (everything else).
 - Binning could be an infinitely long procedure, so once any effort made didn't translate to an improved Completion:Redundancy ratio, binning on that bin was stopped.
+
+
+## Comparisons to our data
+You can compare your binning results to the ones we got by downloading our contigs and profile databases from our figShare repository of all our databases: 10.6084/m9.figshare.20152949
 
 ## References
 - Minoche AE, Dohm JC, Himmelbauer H. 2011. Evaluation of genomic high-throughput sequencing data generated on Illumina HiSeq and Genome Analyzer systems. Genome Biol 12:R112.

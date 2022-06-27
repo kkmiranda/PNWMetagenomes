@@ -1,0 +1,71 @@
+bin_name	total_scgs	supporting_scgs	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+PSC_SED_Bin_00001	11	10	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	None	None
+PSC_SED_Bin_00002	20	20	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Psychromonadaceae	Psychromonas	None
+PSC_SED_Bin_00003	12	3	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Maribacter	Maribacter sp000153165
+PSC_SED_Bin_00004	17	8	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Halieaceae	Halioglobus	Halioglobus sp000156295
+PSC_SED_Bin_00005	4	3	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	None	None
+PSC_BLD_Bin_00001	5	3	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Cellvibrionaceae	Teredinibacter	Teredinibacter turnerae
+PSC_BLD_Bin_00002	11	11	Bacteria	Proteobacteria	Gammaproteobacteria	Granulosicoccales	Granulosicoccaceae	Granulosicoccus	Granulosicoccus antarcticus
+PSC_BLD_Bin_00003	2	1	Bacteria	Proteobacteria	Gammaproteobacteria	UBA10353	UBA7415	UBA7415	UBA7415 sp002470515
+PSC_BLD_Bin_00004	16	10	Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Maricaulaceae	Hellea	Hellea balneolensis
+PSC_BLD_Bin_00005	10	5	Bacteria	Proteobacteria	Gammaproteobacteria	UBA10353	UBA7415	UBA7415	UBA7415 sp002470515
+PSC_BLD_Bin_00006	11	11	Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Maricaulaceae	Hellea	Hellea balneolensis
+PSC_BLD_Bin_00007	19	19	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	None	None
+PSC_BLD_Bin_00009	5	5	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	None	None
+PSC_BLD_Bin_00010	1	1	Bacteria	Bacteroidota	Bacteroidia	Chitinophagales	Saprospiraceae	UBA1994	UBA1994 sp002335865
+PSC_BLD_Bin_00012	4	4	Bacteria	Proteobacteria	Gammaproteobacteria	None	None	None	None
+PSC_BLD_Bin_00013	9	5	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Amylibacter	Amylibacter kogurei
+PSC_BLD_Bin_00014	2	2	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	None	None
+PSC_BLD_Bin_00017	14	10	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Maribacter	None
+PSC_BLD_Bin_00018	9	9	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	None	None
+PSC_RHZ_Bin_00001	12	11	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	None	None
+PSC_RHZ_Bin_00002	8	8	Bacteria	None	None	None	None	None	None
+PSC_RHZ_Bin_00003	4	4	Archaea	Crenarchaeota (Archaea)	Nitrososphaeria	Nitrososphaerales	Nitrosopumilaceae (Archaea)	Nitrosopumilus	None
+LSE_BLD_Bin_00001	15	4	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	SZUA-7	SZUA-7 sp003232155
+LSE_BLD_Bin_00002	17	11	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Lacinutrix	None
+LSE_BLD_Bin_00003	9	8	Bacteria	Proteobacteria	Gammaproteobacteria	Granulosicoccales	Granulosicoccaceae	Granulosicoccus	Granulosicoccus antarcticus
+LSE_BLD_Bin_00004	17	16	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Dokdonia	None
+LSE_BLD_Bin_00005	4	2	Bacteria	Verrucomicrobiota	Verrucomicrobiae	Verrucomicrobiales	Akkermansiaceae	Rubritalea	Rubritalea marina
+LSE_BLD_Bin_00006	6	6	Bacteria	Proteobacteria	Gammaproteobacteria	UBA10353	UBA7415	UBA7415	UBA7415 sp002470515
+LSE_BLD_Bin_00007	3	3	Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Thiotrichaceae	Leucothrix	None
+LSE_BLD_Bin_00008	1	1	Bacteria	Verrucomicrobiota	Verrucomicrobiae	Verrucomicrobiales	Akkermansiaceae	SW10	None
+LSE_BLD_Bin_00009	11	7	Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Maricaulaceae	Hellea	Hellea balneolensis
+LSE_BLD_Bin_00010	11	10	Bacteria	Proteobacteria	Alphaproteobacteria	Caulobacterales	Maricaulaceae	Hellea	Hellea balneolensis
+LSE_BLD_Bin_00011	1	1	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Flavobacterium	Flavobacterium sp002862755
+LSE_BLD_Bin_00012	12	12	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	None	None
+LSE_BLD_Bin_00013	5	2	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Cellvibrionaceae	Teredinibacter	Teredinibacter turnerae
+LSE_BLD_Bin_00014	4	3	Bacteria	Proteobacteria	Gammaproteobacteria	Granulosicoccales	Granulosicoccaceae	Granulosicoccus	Granulosicoccus antarcticus
+LSE_BLD_Bin_00017	10	6	Bacteria	Proteobacteria	Gammaproteobacteria	Granulosicoccales	Granulosicoccaceae	GCA-1730015	GCA-1730015 sp001730015
+LSE_BLD_Bin_00018	2	2	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Cellvibrionaceae	None	None
+NLU_BLB_Bin_00001	7	7	Bacteria	Proteobacteria	Gammaproteobacteria	UBA10353	UBA7415	UBA7415	UBA7415 sp002470515
+PSE_RHZ_Bin_00001	17	7	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	UBA7949	UBA7949 sp002352665
+PSE_RHZ_Bin_00002	7	3	Bacteria	Desulfobacterota	Desulfobulbia	Desulfobulbales	Desulfobulbaceae	Desulfobulbus	Desulfobulbus mediterraneus
+PSE_RHZ_Bin_00003	1	1	Bacteria	Desulfobacterota	Desulfobacteria	Desulfobacterales	Desulfosarcinaceae	Desulfatitalea	Desulfatitalea sp000961655
+PSE_RHZ_Bin_00004	4	4	Bacteria	Bacteroidota	None	None	None	None	None
+PSE_RHZ_Bin_00005	4	4	Bacteria	Bacteroidota	Bacteroidia	Bacteroidales	GCA-2748055	GCA-2748055	GCA-2748055 sp002748055
+PSE_RHZ_Bin_00006	2	2	Bacteria	Desulfuromonadota	Desulfuromonadia	Desulfuromonadales	Pelobacteraceae	SFB93	SFB93 sp001751225
+PSE_RHZ_Bin_00007	1	1	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Alteromonadaceae	Thalassotalea	Thalassotalea sp001913705
+PSE_RHZ_Bin_00010	8	2	Bacteria	Acidobacteriota	Aminicenantia	UBA2199	UBA2199	UBA647	UBA647 sp002299555
+PSE_RHZ_Bin_00011	8	7	Bacteria	Bacteroidota	None	None	None	None	None
+PSE_RHZ_Bin_00012	8	8	Bacteria	None	None	None	None	None	None
+PSE_RHZ_Bin_00015	1	1	Bacteria	Proteobacteria	Gammaproteobacteria	Thiotrichales	Thiotrichaceae	Leucothrix	Leucothrix sp002747455
+PSE_RHZ_Bin_00016	3	2	Bacteria	Spirochaetota	Spirochaetia	Spirochaetales	Spirochaetaceae	UBA5339	UBA5339 sp002084805
+PSE_RHZ_Bin_00017	2	2	Bacteria	None	None	None	None	None	None
+ZMA_SED_Bin_00001	17	6	Bacteria	Campylobacterota	Campylobacteria	Campylobacterales	Sulfurimonadaceae	Sulfurimonas	Sulfurimonas autotrophica
+ZMA_SED_Bin_00002	6	6	Bacteria	Campylobacterota	Campylobacteria	Campylobacterales	None	None	None
+ZMA_SED_Bin_00003	13	13	Bacteria	Proteobacteria	Gammaproteobacteria	Beggiatoales	Beggiatoaceae	Marithrix	Marithrix sp001723685
+ZMA_SED_Bin_00004	1	1	Bacteria	Proteobacteria	Gammaproteobacteria	GCA-001735895	GCA-001735895	GCA-001735895	GCA-001735895 sp001735895
+ZMA_SED_Bin_00005	6	2	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Psychromonadaceae	Aliagarivorans	None
+ZMA_SED_Bin_00006	9	5	Bacteria	Proteobacteria	Gammaproteobacteria	SZUA-229	SZUA-229	GCA-2746365	GCA-2746365 sp002746365
+ZMA_SED_Bin_00009	3	2	Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Sedimenticolaceae	Thiodiazotropha	Thiodiazotropha endoloripes
+ZMA_RHZ_Bin_00001	6	4	Bacteria	Desulfobacterota	Desulfobacteria	Desulfatiglandales	NaphS2	4484-190-2	4484-190-2 sp002050025
+ZMA_RHZ_Bin_00003	2	2	Bacteria	Desulfobacterota	Desulfobacteria	Desulfobacterales	None	None	None
+ZMA_RHZ_Bin_00004	13	13	Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Sedimenticolaceae	41T-STBD-0c-01a	41T-STBD-0c-01a sp002009425
+ZMA_RHZ_Bin_00005	6	3	Bacteria	Bacteroidota	Bacteroidia	Flavobacteriales	Flavobacteriaceae	Eudoraea	Eudoraea adriatica
+ZMA_RHZ_Bin_00006	18	15	Bacteria	Campylobacterota	Campylobacteria	Campylobacterales	Sulfurovaceae	Sulfurovum	Sulfurovum sp000296775
+ZMA_RHZ_Bin_00007	2	2	Bacteria	None	None	None	None	None	None
+ZMA_RHZ_Bin_00008	3	3	Bacteria	Desulfobacterota	Desulfobacteria	Desulfobacterales	Desulfobacteraceae	Desulfobacula	Desulfobacula toluolica
+ZMA_RHZ_Bin_00009	4	2	Bacteria	Proteobacteria	Gammaproteobacteria	Chromatiales	Sedimenticolaceae	41T-STBD-0c-01a	41T-STBD-0c-01a sp002009425
+ZMA_RHZ_Bin_00010	14	11	Bacteria	Proteobacteria	Gammaproteobacteria	SZUA-229	SZUA-229	GCA-2746365	GCA-2746365 sp002746365
+ZMA_RHZ_Bin_00011	3	2	Bacteria	Proteobacteria	Gammaproteobacteria	SZUA-229	SZUA-229	GCA-2746365	GCA-2746365 sp002746365
+ZMA_RHZ_Bin_00013	3	2	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Halieaceae	Halioglobus	Halioglobus lutimaris

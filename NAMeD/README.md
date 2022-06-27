@@ -1,10 +1,12 @@
-# Generating a Microbial Metabolism Heatmap
+# Network Algorithm for Metabolism Detection (NAMeD)
 
 For our study, we were interested in the metabolic capacity of microbial communities living on the surfaces of marine phototrophs. This workflow goes through how to generate Fig. 3 (below)
 
-<img src='./heatmapAlgorithm.png'>
+<img src='./fig3.png'>
 
 ## Generating a masterdata file
+
+<i>You can either follow the section below or if you want to just go straight to working with the algorithm, download </i>`tatoosh_masterdata.txt`<i> and </i>`tatoosh_MAG_names.txt`<i> from our figShare repo: 10.6084/m9.figshare.20152949. Save this in this folder and go on to the next section.
 
 From the <a href='../01_Raw_Sequences_to_MAGs.md'> Raw Sequences to MAGs Workflow</a>, we are left with `CONTIGS.db` and `PROFILE.db` files for <b>8 metagenomes</b> that have been clustered and cleaned into MAGs with high completion and low redundancy. 
 
@@ -15,22 +17,22 @@ We start with these files to compile a single masterdata tab-delimited file that
     ```
     anvi-export-table CONTIGS.db --table genes_in_splits
     ```
-- Split-Bin data (maps each split to a bin)
+- Split-Bin data (maps each split to a bin) (COLLECTION_NAME is FINAL_MG4 for Laminaria setchellii data)
     ```
-    anvi-export-collection
+    anvi-export-collection -p PROFILE.db -C COLLECTION_NAME
     ```
 - Gene Function data (metabolic function of each gene)
     ```
-
+    anvi-export-functions -c CONTIGS.db
     ```
 - TaxID of each bin (taxonomy corresponding to each Bin)
     ```
-    anvi-estimate-scg-taxonomy
+    anvi-estimate-scg-taxonomy -p PROFILE.db -c CONTIGS.db -C COLLECTION_NAME
     ```
 
 The files will all emerge with generic names so take the time to rename them between each metagenome processed. 
 
-Once you have all of these files, remove the headers and place all similar files in the same file (eg. `MG1_genes_in_splits.txt` and `MG2_genes_in_splits.txt` into one `genes_in_splits.txt`)
+Once you have all of these files, remove the headers and concatenate all similar files into one file (eg. `MG1_genes_in_splits.txt` and `MG2_genes_in_splits.txt`...`MG8_genes_in_splits.txt` into one `genes_in_splits.txt`). Put this file into `assets/`
 
 Then, once updating the basepaths in `gen_masterdata.py`, run 
 ```
@@ -56,15 +58,6 @@ Any of the pathway files can be run using (provided the dependencies are install
 python pathwayBiotin.py
 ```
 
-## Nitrogen Metabolisms
-
-As the metabolic pathways for nitrogen are small <5 genes with not that many degenerate pathways, a more straightforward count could be used instead of the more complex algorithm that has a longer runtime. 
-
-After updating corresponding filenames, run:
-```
-python finalNitro.py
-```
-
 ## Carbon Metabolisms
 
 Using the gene set developed by Poretsky et al. (2010) that identifies transporter genes related to dissolved organic carbon metabolisms, this chunk of code counts the number of such genes are present in the broad categories: Compatible Solutes, Carboxylic Acids, Carbohydrates Pentoses, Carbohydrates General. 
@@ -76,15 +69,23 @@ python finalCarbon.py
 
 ## Ammonification Hydrolases
 
-Ammonification hydrolases are a way that microbial communities may gain access to ammonia by breaking up more complex proteins into amino acids, releasing ammonia in the process. The enzymes that do this are highly varied and can be viewed in Supplementary Table `Table S4`
+Ammonification hydrolases are a way that microbial communities may gain access to ammonia by breaking up more complex proteins into amino acids, releasing ammonia in the process. We compiled a list of enzymes that do exactly this in `assets/ammonificationHydrolases.txt`. These enzymes are all those from the classes:
+- EC:1.4 - Acting on the CH-NH2 group of donors
+- EC:3.5 - Acting on carbon-nitrogen bonds, other than peptide bonds
+- EC:4.3.1 - Ammonia-lyases
 
+I inputed these search terms into the Orthology Database in genome.jp, took all the KEGG calls from the results and put them into the file above. The enzymes that do this are highly varied and can also be viewed in Supplementary Table `Table S4`.
+
+I then just run this through the command line interface.
 ```
 python cnBonds_misc_data.py
 ```
 
 ## Visualizing
 
-The final graph was made in R. Details can be found in `heatmapGen.R`. 
+The final graph was made in R. Details can be found in `heatmapGen.R`. The output needs a lot of refining to look submission quality which I ended up doing in <a href="https://inkscape.org/">Inkscape</a> - an open source Photoshop. Check it out!
+
+The main manuscript has the figure without the MAG names along the x-axis. However, the Fig S2 <i>does</i> have the MAG names. Both `.png` files are in this folder.
 
 ## <i>References</i>
 - Hyatt D, Chen G-L, LoCascio PF, Land ML, Larimer FW, Hauser LJ. 2010. Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 11:119.

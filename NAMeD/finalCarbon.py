@@ -16,14 +16,14 @@ carbo = [
 
 # Load MAG names
 misc_list = {}
-with open(f"{filepath}/geneFunctionTables/goodBins/tatoosh_MAG_names.txt",'r') as m:
+with open(f"{filepath}/geneFunctionTables/3Jun2022/tatoosh_MAG_names.txt",'r') as m:
     m = m.readlines()
     for mag in m:
         misc_list[mag.strip()] = []
 
 # Set up masterdata sheet
 mag_gene_dict = {}
-with open(f"{filepath}/geneFunctionTables/goodBins/COG_function.txt", 'r') as g:
+with open(f"{filepath}/geneFunctionTables/3Jun2022/COG_function.txt", 'r') as g:
     g = g.readlines()
     for line in g:
         line = line.split()
@@ -43,27 +43,29 @@ with open(f"{filepath}/geneFunctionTables/goodBins/COG_function.txt", 'r') as g:
 output=[]
 
 for mag in misc_list:
-    carbGenSum,carbPentoseSum,carbAcidSum,solute = 0,0,0,0
+    carbGen,carbPentose,carbAcid,solute = 'N','N','N','N'
     for cog in carbo:
         try:
             if cog in mag_gene_dict[mag]:
                 if cog in Carbohydrates_general:
-                    carbGenSum += 1
+                    carbGen = 'Y'
                 elif cog in Carbohydrates_pentoses:
-                    carbPentoseSum += 1
+                    carbPentose = 'Y'
                 elif cog in Carboxylic_acids:
-                    carbAcidSum += 1
+                    carbAcid = 'Y'
                 elif cog in Compatible_solutes:
-                    carbAcidSum += 1
+                    solute = 'Y'
+                else:
+                    pass
         except:
             pass
     
-    output.append(f"{mag}\t{carbGenSum}\t{carbPentoseSum}\t{carbAcidSum}\t{carbAcidSum}")
+    output.append(f"{mag}\t{carbGen}\t{carbPentose}\t{carbAcid}\t{solute}")
     #print(checking)
 
 header = "MAG_names\tCarbohydrates_general\tCarbohydrates_pentoses\tCarboxylic_acids\tCompatible_solutes"
 
 output.insert(0,header)
 
-with open(f"{filepath}/heatmapGen/heatmapFiles/finalCarbon.txt", "w") as T:
+with open(f"{filepath}/heatmapGen/heatmapFilesPathway/finalCarbon.txt", "w") as T:
     T.write("\n".join(output))

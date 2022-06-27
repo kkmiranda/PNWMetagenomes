@@ -1,11 +1,11 @@
 # Generating a nifH phylogenetic figure
 <div style="text-align: center;">
-<img src='./nifHTree.png' width=350>
+<img src='./fig4.png' width=350>
 </div>
-This workflow goes through the steps taken to generate Fig. 2 that places the nifH genes found within the broader phylogenetic context of the nifH gene. The files used are in this folder. 
+This workflow goes through the steps taken to generate Fig. 4 that places the nifH genes found within the broader phylogenetic context of the nifH gene. The files used are in this folder. 
 
 Quick learnings:
-- We originally attempted to `Protein-BLAST` all our fasta files against three well known databases (Farnelid, FunGene and Zehr). However, all three databases appeared to have been contaminated by genes associated with the nifH family.
+- We originally attempted to `Protein-BLAST` all our fasta files against three well known databases (Farnelid, FunGene and Zehr). However, all three databases appeared to have been contaminated by genes associated with the nifH family that aren't actually nifH genes... gross.
 
 ## Gene Annotation and Identification
 - `Prodigal` was used to identify Open Reading Frames (ORFs) (Hyatt et al. 2011). 
@@ -37,10 +37,10 @@ Finally, we placed the sequences into `IQTree` (Nguyen et al. 2015) that first u
 iqtree -s g50.fa -nt AUTO -bb 1000 -alrt 1000 -mset LG
 ```
 
-Finally, we loaded the output `g50.fa.treefile` into FigTree and visual aesthetics were spruced up using InkScape
+Finally, we loaded the output `g50.fa.treefile` into iTol and visual aesthetics were spruced up using InkScape. 
 
 ## Quickshot
-If you want to go through all of these steps in the snap of the number of threads your computer runs on, just run:
+If you want to go through all of these steps in the snap of your fingers, in your command line, just run:
 ```
 bash tree_builder.sh
 ```

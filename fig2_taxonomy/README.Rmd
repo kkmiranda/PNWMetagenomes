@@ -1,0 +1,75 @@
+---
+title: "Taxonomy_Fig2"
+author: "Khashiff Miranda"
+date: "04/06/2022"
+output: html_document
+---
+
+This is a fairly straightforward R script towards generating the stacked bar plots we showed in Fig. 2. We could have just shown a phylogenetic tree but it looked too busy as we were comparing across samples and oxygen environments. A good ol' stacked boxplot did the trick. 
+
+```{r setup}
+library(tidyr)
+library(ggplot2)
+library(randomcoloR)
+library(dplyr)
+```
+
+```{r loading files}
+#ignores archaeal genome (PSC_RHZ_00003) and NLU_BLB
+#ignores bacteria unclassified at phylum level (PSC_RHZ_Bin_00002, PSE_RHZ_Bin_00012, PSE_RHZ_Bin_00017, ZMA_RHZ_Bin_00007)
+
+tax = read.csv("all_taxID.txt", sep="\t")[-c(21,39,49,52,65),] 
+tax = separate(tax, bin_name, into = c("env","bin"), sep="_Bin_")
+table(tax$t_species)
+
+
+```
+
+
+```{r phyla}
+phyl_plot = tax %>% 
+  select(env, t_phylum) %>%
+  group_by(env) %>% count(t_phylum) %>%
+  ggplot(aes(fill=t_phylum,y=n,x=env)) +
+  geom_bar(position="fill", stat="identity") + 
+  labs(x="Environment", 
+       y="MAG Phylum Relative Abundance",
+       fill="Phylum") +
+  theme(panel.background = element_blank(),
+        axis.text.x = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks.x = element_blank()) + 
+  scale_fill_manual(values = distinctColorPalette(9))
+
+phyl_plot
+
+ggsave(plot = phyl_plot, "phyl_plot.png",  width = 6.1, height = 4.2, device="png", dpi=700)
+```
+
+```{r family}
+fam = tax %>% 
+  select(env, t_family) %>%
+  group_by(env) %>% count(t_family)
+
+fam$t_family = factor(fam$t_family, 
+                      levels = c("None","Akkermansiaceae","Cellvibrionaceae","Flavobacteriaceae","Granulosicoccaceae","Maricaulaceae","Rhodobacteraceae","Thiotrichaceae","UBA7415","Saprospiraceae","Halieaceae","Psychromonadaceae","Alteromonadaceae","Desulfobulbaceae","Desulfosarcinaceae",
+"GCA-2748055","Pelobacteraceae","Spirochaetaceae","UBA2199","Desulfobacteraceae","NaphS2","Sedimenticolaceae","Sulfurovaceae","SZUA-229","Beggiatoaceae","GCA-001735895","Sulfurimonadaceae","Nitrosopumilaceae (Archaea)"))
+
+
+fam_plot = ggplot(fam, aes(fill=t_family,y=n,x=env)) +
+  geom_bar(position="fill", stat="identity") +
+  scale_fill_manual(values = distinctColorPalette(28)) + 
+  labs(x="Environment", 
+       y="MAG Family Relative Abundance",
+       fill="Family") + 
+  theme(panel.background = element_blank(),
+      axis.text.x = element_blank(),
+      axis.title = element_blank(),
+      axis.ticks.x = element_blank()) 
+
+fam_plot
+
+ggsave(plot = fam_plot, "fam_plot.png", width = 8, height = 4.2, device="png", dpi=700)
+```
+
+

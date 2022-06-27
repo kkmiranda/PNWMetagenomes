@@ -1,0 +1,61 @@
+library(ggplot2)
+
+DO = read.csv("../DO/DO_data_150s.txt",sep="\t",header = TRUE)
+#DO$Site = factor(DO$Site)
+#DO$Date = factor(DO$Date)
+#DO$exposed = factor(DO$exposed, labels = c("wtr","rhz"))
+#DO$spp = factor(DO$spp)
+DO$DO = as.numeric(DO$DO)
+
+## STATISTICS ##
+hedo_07jun19 = subset(DO, Date=="07-juin-19")
+print(pairwise.t.test(hedo_07jun19$DO, hedo_07jun19$exposed))
+
+hedo_08jun19 = subset(DO, Date=="08-juin-19")
+print(pairwise.t.test(hedo_08jun19$DO, hedo_08jun19$exposed))
+
+SB_09jun19 = subset(DO, Date=="09-juin-19")
+print(pairwise.t.test(hedo_09jun19$DO, hedo_09jun19$exposed))
+
+hedo_13jun21 = subset(DO, Date=="13-juin-21")
+print(pairwise.t.test(hedo_13jun21$DO, hedo_13jun21$exposed))
+
+psc = subset(DO, spp=="psc")
+print(pairwise.t.test(psc$DO, psc$exposed))
+
+pse = subset(DO, spp=="pse")
+print(pairwise.t.test(pse$DO, pse$exposed))
+## ## ## ## ## ## 
+
+## GRAPHS ##
+ggplot(DO, aes(x=Date, y=DO, fill=exposed)) + 
+  geom_boxplot() + 
+  theme_classic() + 
+  ylab("DO [mg/L]") + 
+  xlab("Date")
+
+spp.labs=c("P. scouleri","P. serrulatus")
+names(spp.labs) = c("psc","pse")
+
+final = ggplot(DO, aes(x=exposed, y=DO, fill=exposed)) + 
+  geom_boxplot(outlier.shape = NA) + 
+  geom_point(aes(color=Date), position=position_jitterdodge()) + 
+  facet_grid(.~ spp, scale="free_x", labeller = labeller(spp=spp.labs)) +
+  scale_fill_manual(values=c("#ff3333","#87ceeb"),
+                    labels=c("Rhizome","In Water Column"),
+                    name="Environment") +
+  scale_color_manual(values=c("#2E4052","#FFC857","#44AF69","#950952"),
+                     labels=c("07 Jun 2019", "08 Jun 2019", "09 Jun 2019", "13 Jun 2021")) + 
+  theme_classic() +
+  theme(axis.ticks.x = element_blank(),                       
+        axis.text.x = element_blank(),
+        panel.background = element_rect(fill="transparent",size=1),
+        panel.spacing = unit(0, "mm"),                       
+        strip.background = element_blank(),
+        strip.text.x = element_text(face="italic", size=14),
+        legend.background = element_rect(color='black')) +
+  ylab("DO [mg/L]") + 
+  xlab("Species")
+
+ggsave(plot = final, 'final1_20Jun22.png', width = 6, height = 5, device="png", dpi=700)
+
